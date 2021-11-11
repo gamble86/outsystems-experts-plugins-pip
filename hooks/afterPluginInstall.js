@@ -2,9 +2,9 @@
 
 module.exports = function (context) {
 
-    var fs = require('fs');
-    var path = require('path');
-    var deferral = require('q').defer();
+    var fs = require("fs");
+    var path = require("path");
+    var deferral = require("q").defer();
 
     // android platform directory
     var platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
