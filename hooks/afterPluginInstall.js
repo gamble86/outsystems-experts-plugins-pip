@@ -2,13 +2,13 @@
 
 module.exports = function (context) {
 
-    let fs = require('fs');
-    let path = require('path');
-    let deferral = require('q').defer();
+    var fs = require('fs');
+    var path = require('path');
+    var deferral = require('q').defer();
 
     // android platform directory
-    let platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
-    let androidManifestFile = path.join(platformAndroidDir, 'AndroidManifest.xml');
+    var platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
+    var androidManifestFile = path.join(platformAndroidDir, 'AndroidManifest.xml');
 
     function changeProperty(inputData, propertyName, targetValue, merge) {
         var hasProperty = (inputData.indexOf(propertyName) > -1);
