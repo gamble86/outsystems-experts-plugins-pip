@@ -12,9 +12,9 @@
             </feature>
         </config-file>
         <!--OS HACK 3 lines below -->
-        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
-         <activity android:name="VideoActivity" android:supportsPictureInPicture="true" android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
-         </activity>
+<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="overwrite">
+    <activity android:name="MainActivity" android:label="NewLabelLS" android:configChanges="orientation|keyboardHidden" />
+</edit-config>
         </edit-config>
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
     </platform>
