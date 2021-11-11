@@ -6,7 +6,7 @@
     </js-module>
     <platform name="android">
     <!--OS HACK 3 lines below -->
-        <edit-config file="AndroidManifest.xml" target="/activity/" mode="merge">
+        <edit-config file="AndroidManifest.xml" target="/application/activity/" mode="merge">
             <activity android:supportsPictureInPicture="true" />
         </edit-config>
         <hook type="after_plugin_install" src="hooks/afterPluginInstall.js" />
