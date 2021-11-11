@@ -11,7 +11,7 @@
                 <param name="android-package" value="com.outsystems.experts.plugins.pip.PIPPlugin" />
             </feature>
         </config-file> 
-    <config-file parent="/manifest/application/activity" target="AndroidManifest.xml">
+    <config-file parent="/*" target="AndroidManifest.xml">
 	            <activity android:supportsPictureInPicture="true" />
 	</config-file> 
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
