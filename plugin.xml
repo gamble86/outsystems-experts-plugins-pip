@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="com.outsystems.experts.plugins.pip" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>PIPPlugin</name>
-	<description>Cordova HMS Location Plugin</description>
+	<description>Cordova pip Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,location,hms-location,huawei-location,hms,huawei</keywords>
+    <keywords>pip</keywords>
 	
     <js-module name="PIPPlugin" src="www/PIPPlugin.js">
         <clobbers target="cordova.plugins.PIPPlugin" />
@@ -19,7 +19,9 @@
         </config-file>
     <!-- receiver -->		
     <config-file target="AndroidManifest.xml" parent="application">
-	<activity android:supportsPictureInPicture="true" />
+	<activity>
+		<activity android:supportsPictureInPicture="true" />
+	</activity>	
 	</config-file>
 	
     <!-- source files -->	
