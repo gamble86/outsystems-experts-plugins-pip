@@ -15,7 +15,7 @@
  
         
  <config-file parent="/manifest/application/activity" target="app/src/main/AndroidManifest.xml">  
-      <android:supportsPictureInPicture="true" />   
+      <activity android:supportsPictureInPicture="true" />   
 </config-file>
         
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
