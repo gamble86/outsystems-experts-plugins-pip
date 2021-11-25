@@ -14,7 +14,7 @@
        
  
         
- <config-file parent="/manifest/application/activity" target="app/src/main/AndroidManifest.xml">  
+ <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">  
       <activity android:name="pippit" android:supportsPictureInPicture="true" />   
 </config-file>
         
