@@ -14,14 +14,11 @@
        
  
         
- <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">  
-    <activity android:supportsPictureInPicture="true" />   
+ <config-file parent="/manifest" target="app/src/main/AndroidManifest.xml">  
+     <application>
+     <activity android:supportsPictureInPicture="true" />   
+     </application>    
 </config-file>
-        
-        <!-- if no work - maybetry <activity>
-                                <paramam>
-                               </activity>
-        -->
         
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
     </platform>
