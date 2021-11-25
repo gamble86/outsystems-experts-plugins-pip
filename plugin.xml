@@ -11,11 +11,17 @@
                 <param name="android-package" value="com.outsystems.experts.plugins.pip.PIPPlugin" />
             </feature>
         </config-file>
+       
+ 
         
-        <!--OS HACK 3 lines below -->
-<edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
-    <activity android:name="MainActivity" android:label="NewLabelLS" android:configChanges="orientation|keyboardHidden" />
-</edit-config> 
+ <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">  
+    <activity android:supportsPictureInPicture="true" />   
+</config-file>
+        
+        <!-- if no work - maybetry <activity>
+                                <paramam>
+                               </activity>
+        -->
         
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
     </platform>
