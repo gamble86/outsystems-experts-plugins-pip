@@ -1,13 +1,11 @@
-#!/usr/bin/env node
+module.exports = function (ctx) {
 
-module.exports = function (context) {
-
-    var fs = require("fs");
-    var path = require("path");
-    var deferral = require("q").defer();
+    var fs = ctx.requireCordovaModule("fs");
+    path = ctx.requireCordovaModule("path");
+    deferral = ctx.requireCordovaModule("q").defer();
 
     // android platform directory
-    var platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
+    var platformAndroidDir = path.join(ctx.opts.projectRoot, 'platforms/android');
     var androidManifestFile = path.join(platformAndroidDir, 'AndroidManifest.xml');
 
     function changeProperty(inputData, propertyName, targetValue, merge) {
