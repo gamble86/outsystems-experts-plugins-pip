@@ -15,7 +15,6 @@
 <edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
     <activity android:name="MainActivity" android:label="NewLabelLS" android:configChanges="orientation|keyboardHidden" />
 </edit-config>
-        </edit-config>
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
     </platform>
 </plugin>
