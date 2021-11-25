@@ -1,8 +1,8 @@
 module.exports = function (ctx) {
 
-    var fs = ctx.requireCordovaModule("fs");
-    path = ctx.requireCordovaModule("path");
-    deferral = ctx.requireCordovaModule("q").defer();
+    const fs = ctx.requireCordovaModule("fs");
+    const path = ctx.requireCordovaModule("path");
+    const deferral = ctx.requireCordovaModule("q").defer();
 
     // android platform directory
     var platformAndroidDir = path.join(ctx.opts.projectRoot, 'platforms/android');
