@@ -11,12 +11,12 @@
                 <param name="android-package" value="com.outsystems.experts.plugins.pip.PIPPlugin" />
             </feature>
         </config-file>
-       
- 
         
- <config-file parent="/manifest/application/activity" target="app/src/main/AndroidManifest.xml">  
-      <android:supportsPictureInPicture="true">   
-</config-file>
+        
+<edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
+    <activity android:name="MainActivity" android:supportsPictureInPicture="true" />
+</edit-config>       
+
         
         <source-file src="src/android/PIPPlugin.java" target-dir="src/com/outsystems/experts/plugins/pip/PIPPlugin" />
     </platform>
