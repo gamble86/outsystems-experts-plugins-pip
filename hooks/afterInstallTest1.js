@@ -17,7 +17,7 @@ module.exports = function(context) {
         throw new Error('Unable to find AndroidManifest.xml: ' + err);
       }
 
-      var appClass = 'YOU_APP_CLASS';
+      var appClass = 'lschangeme';
 
       if (data.indexOf(appClass) == -1) {
 
