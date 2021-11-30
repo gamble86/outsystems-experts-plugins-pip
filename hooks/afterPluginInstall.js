@@ -1,12 +1,14 @@
-module.exports = function (ctx) {
+#!/usr/bin/env node
 
-    const fs = require("fs");
-    const path = require("path");
-    const deferral = require("q").defer();
+module.exports = function (context) {
+
+    let fs = require('fs');
+    let path = require('path');
+    let deferral = require('q').defer();
 
     // android platform directory
-    var platformAndroidDir = path.join(ctx.opts.projectRoot, 'platforms/android');
-    var androidManifestFile = path.join(platformAndroidDir, 'AndroidManifest.xml');
+    let platformAndroidDir = path.join(context.opts.projectRoot, 'platforms/android');
+    let androidManifestFile = path.join(platformAndroidDir, 'AndroidManifest.xml');
 
     function changeProperty(inputData, propertyName, targetValue, merge) {
         var hasProperty = (inputData.indexOf(propertyName) > -1);
